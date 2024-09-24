@@ -68,7 +68,6 @@ jobs:
             echo "Hello Shoaib"
             ls -al
 
-            cat /home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
             # kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
             # kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-service.yaml

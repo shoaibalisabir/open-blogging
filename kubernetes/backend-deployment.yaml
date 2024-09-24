@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: blog-backend
-          image: shoaibisone/open-blog:backend-latest
+          image: shoaibisone/open-blog/backend-latest
           ports:
             - containerPort: 5000
