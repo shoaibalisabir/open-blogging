@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-require('dotenv').config();
 
 function CreatePost() {
     const [title, setTitle] = useState('');
