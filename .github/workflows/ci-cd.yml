@@ -58,8 +58,8 @@ jobs:
             mkdir -p /home/minikube-user/Blog_Project/kubernetes
 
             # Copy YAML files from GitHub Actions runner to the AWS instance
-            scp -vvv -o StrictHostKeyChecking=no ./kubernetes/backend-deployment.yaml minikube-user@${{ secrets.AWS_INSTANCE_IP }}:/home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
-            scp -vvv -o StrictHostKeyChecking=no ./kubernetes/frontend-deployment.yaml minikube-user@${{ secrets.AWS_INSTANCE_IP }}:/home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
+            scp -o StrictHostKeyChecking=no ./kubernetes/backend-deployment.yaml minikube-user@${{ secrets.AWS_INSTANCE_IP }}:/home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
+            scp -o StrictHostKeyChecking=no ./kubernetes/frontend-deployment.yaml minikube-user@${{ secrets.AWS_INSTANCE_IP }}:/home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
           SCRIPT_AFTER: |
             kubectl apply -f /path/to/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /path/to/Blog_Project/kubernetes/frontend-deployment.yaml
