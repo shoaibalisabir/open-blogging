@@ -65,6 +65,9 @@ jobs:
             curl -O https://github.com/shoaibalisabir/open-blogging/blob/master/kubernetes/backend-service.yaml
             curl -O https://github.com/shoaibalisabir/open-blogging/blob/master/kubernetes/frontend-service.yaml
 
+            echo "Hello Shoaib"
+            ls -al
+
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-service.yaml
