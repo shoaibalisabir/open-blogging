@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Open Blogging",
+  "name": "Open Blogging CI/CD MERN Project",
   "icons": [
     {
       "src": "favicon.ico",
