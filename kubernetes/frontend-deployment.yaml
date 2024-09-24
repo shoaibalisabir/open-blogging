@@ -1,19 +1,19 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion:apps/v1
+kind:Deployment
 metadata:
-  name: blog-frontend
+  name:blog-frontend
 spec:
-  replicas: 1
+  replicas:1
   selector:
     matchLabels:
-      app: blog-frontend
+      app:blog-frontend
   template:
     metadata:
       labels:
-        app: blog-frontend
+        app:blog-frontend
     spec:
       containers:
-        - name: blog-frontend
-          image: shoaibisone/open-blog:frontend-latest
+        - name:blog-frontend
+          image:shoaibisone/open-blog:frontend-latest
           ports:
-            - containerPort: 3000
+            - containerPort:3000
