@@ -42,7 +42,7 @@ jobs:
 
       # Deploy to Kubernetes
       - name: SSH to AWS Instance and Deploy
-        uses: tiyee/action-ssh@release
+        uses: tiyee/action-ssh@v1.0.1
         with:
           host: ${{ secrets.AWS_INSTANCE_IP }}  
           port: 22
