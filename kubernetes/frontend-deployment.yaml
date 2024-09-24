@@ -13,7 +13,7 @@ spec:
         app: blog-frontend
     spec:
       containers:
-      - name: blog-frontend
-        image: shoaibisone/open-blog:frontend-latest
-        ports:
-        - containerPort: 3000
+        - name: blog-frontend
+          image: shoaibisone/open-blog:frontend-latest
+          ports:
+            - containerPort: 3000
