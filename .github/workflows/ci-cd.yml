@@ -56,3 +56,4 @@ jobs:
 
             kubectl apply -f /path/to/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /path/to/Blog_Project/kubernetes/frontend-deployment.yaml
+            
