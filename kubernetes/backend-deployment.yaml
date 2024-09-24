@@ -1,19 +1,20 @@
-apiVersion:apps/v1
-kind:Deployment
+---
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name:blog-backend
+  name: blog-backend
 spec:
-  replicas:1
+  replicas: 1
   selector:
     matchLabels:
-      app:blog-backend
+      app: blog-backend
   template:
     metadata:
       labels:
-        app:blog-backend
+        app: blog-backend
     spec:
       containers:
-        - name:blog-backend
-          image:shoaibisone/open-blog:backend-latest
+        - name: blog-backend
+          image: shoaibisone/open-blog:backend-latest
           ports:
-            - containerPort:5000
+            - containerPort: 5000

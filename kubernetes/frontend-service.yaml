@@ -1,12 +1,13 @@
-apiVersion:v1
-kind:Service
+---
+apiVersion: v1
+kind: Service
 metadata:
-  name:blog-frontend-service
+  name: blog-frontend-service
 spec:
   selector:
-    app:blog-frontend
+    app: blog-frontend
   ports:
-    - protocol:TCP
-      port:3000
-      targetPort:3000
-  type:NodePort
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
