@@ -46,14 +46,12 @@ jobs:
 
       # Deploy to Kubernetes
       - name: SSH to AWS Instance and Deploy
-        uses: tiyee/action-ssh@v1.0.1
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.AWS_INSTANCE_IP }}  
-          port: 22
           username: minikube-user 
           privateKey: ${{ secrets.PRIVATE_SSH_KEY }}
           script: |
 
             kubectl apply -f /path/to/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /path/to/Blog_Project/kubernetes/frontend-deployment.yaml
-            
