@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+require('dotenv').config();
 
 function EditPost() {
     const { id } = useParams();
@@ -11,7 +12,7 @@ function EditPost() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/posts/${id}`);
+                const response = await axios.get(`http://${process.env.IP_ADDRESS}:5000/api/posts/${id}`);
                 setTitle(response.data.title);
                 setContent(response.data.content);
             } catch (error) {
@@ -24,7 +25,7 @@ function EditPost() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/posts/${id}`, { title, content });
+            await axios.put(`http://${process.env.IP_ADDRESS}:5000/api/posts/${id}`, { title, content });
             navigate(`/post/${id}`);
         } catch (error) {
             console.error('Error updating post:', error);

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Home.css'; // Import the CSS file
+require('dotenv').config();
 
 function Home() {
     const [posts, setPosts] = useState([]);
@@ -9,7 +10,7 @@ function Home() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/posts');
+                const response = await axios.get('http://${process.env.IP_ADDRESS}:5000/api/posts');
                 setPosts(response.data);
             } catch (error) {
                 console.error('Error fetching posts:', error);

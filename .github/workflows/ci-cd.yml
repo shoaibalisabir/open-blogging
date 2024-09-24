@@ -63,6 +63,7 @@ jobs:
             cd /home/minikube-user/Blog_Project/kubernetes
 
             # Copy YAML files from GitHub Actions runner to the AWS instance
+            curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/app-secret.yaml
             curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/backend-deployment.yaml
             curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/frontend-deployment.yaml
             curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/backend-service.yaml
@@ -70,6 +71,7 @@ jobs:
 
 
 
+            kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/app-secret.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-service.yaml

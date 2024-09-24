@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+require('dotenv').config();
 
 function Post() {
     const { id } = useParams();
@@ -9,7 +10,7 @@ function Post() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/posts/${id}`);
+                const response = await axios.get(`http://${process.env.IP_ADDRESS}:5000/api/posts/${id}`);
                 setPost(response.data);
             } catch (error) {
                 console.error('Error fetching post:', error);
@@ -20,7 +21,7 @@ function Post() {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/posts/${id}`);
+            await axios.delete(`http://${process.env.IP_ADDRESS}:5000/api/posts/${id}`);
             alert('Post deleted!');
             window.location.href = '/'; // Redirect to home
         } catch (error) {

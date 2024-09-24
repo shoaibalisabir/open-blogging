@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+require('dotenv').config();
 
 function CreatePost() {
     const [title, setTitle] = useState('');
@@ -26,7 +27,7 @@ function CreatePost() {
         }
 
         try {
-            await axios.post('http://localhost:5000/api/posts', { title, content });
+            await axios.post('http://${process.env.IP_ADDRESS}:5000/api/posts', { title, content });
             navigate('/'); // Redirect to home after creating the post
         } catch (error) {
             console.error('Error creating post:', error);
