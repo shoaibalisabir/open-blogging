@@ -40,7 +40,7 @@ jobs:
       # Frontend Build and Push
       - name: Build and push Frontend Docker image
         run: |
-          cd ../blog-frontend
+          cd blog-frontend
           docker build -t shoaibisone/open-blog:frontend-latest .
           docker push shoaibisone/open-blog:frontend-latest
 
