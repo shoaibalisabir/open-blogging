@@ -54,10 +54,14 @@ jobs:
           SCRIPT_BEFORE: |
             whoami
             ls -al
+            # Create a directory for Kubernetes YAML files
+            mkdir -p /home/minikube-user/Blog_Project/kubernetes
+
+            cd /home/minikube-user/Blog_Project/kubernetes
 
             # Copy YAML files from GitHub Actions runner to the AWS instance
             curl -O https://github.com/shoaibalisabir/open-blogging/blob/master/kubernetes/backend-deployment.yaml
             curl -O https://github.com/shoaibalisabir/open-blogging/blob/master/kubernetes/frontend-deployment.yaml
 
-            kubectl apply -f /Blog_Project/kubernetes/backend-deployment.yaml
-            kubectl apply -f /Blog_Project/kubernetes/frontend-deployment.yaml
+            kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
+            kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
