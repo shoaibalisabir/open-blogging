@@ -100,3 +100,4 @@ jobs:
             kubectl apply -f /home/minikube/Blog_Project/kubernetes/frontend-deployment.yaml
             kubectl apply -f /home/minikube/Blog_Project/kubernetes/backend-service.yaml
             kubectl apply -f /home/minikube/Blog_Project/kubernetes/frontend-service.yaml
+ 
