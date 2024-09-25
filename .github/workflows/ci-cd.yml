@@ -53,7 +53,7 @@ jobs:
           REMOTE_USER: ubuntu 
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
           SCRIPT_BEFORE: |
-            su -u minikube
+            su - minikube
             whoami
             ls -al
             # Create a directory for Kubernetes YAML files
