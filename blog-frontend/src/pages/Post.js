@@ -9,7 +9,7 @@ function Post() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await axios.get(`http://${process.env.IP_ADDRESS}:5000/api/posts/${id}`);
+                const response = await axios.get(`http://3.211.66.2:5000/api/posts/${id}`);
                 setPost(response.data);
             } catch (error) {
                 console.error('Error fetching post:', error);
@@ -20,7 +20,7 @@ function Post() {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://${process.env.IP_ADDRESS}:5000/api/posts/${id}`);
+            await axios.delete(`http://3.211.66.2:5000/api/posts/${id}`);
             alert('Post deleted!');
             window.location.href = '/'; // Redirect to home
         } catch (error) {
