@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Home.css'; // Import the CSS file
+import './Home.css'; 
+const Dotenv = require('dotenv-webpack');
+
+module.exports = {
+    plugins: [
+        new Dotenv(),
+    ],
+};
 
 function Home() {
     const [posts, setPosts] = useState([]);
