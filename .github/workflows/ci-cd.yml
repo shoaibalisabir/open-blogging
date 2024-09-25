@@ -56,7 +56,7 @@ jobs:
             whoami
             ls -al
             # Create a directory for Kubernetes YAML files
-            mkdir -p /home/minikube-user/Blog_Project/kubernetes 
+            mkdir -p /Blog_Project/kubernetes 
 
             
 
