@@ -74,5 +74,5 @@ jobs:
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/app-secret.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-deployment.yaml
             kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-deployment.yaml
-            kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-service.yaml
-            kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-service.yaml
+            # kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/backend-service.yaml
+            # kubectl apply -f /home/minikube-user/Blog_Project/kubernetes/frontend-service.yaml
