@@ -26,8 +26,10 @@ function CreatePost() {
             return;
         }
 
+        console.log(`http://${process.env.REACT_APP_IP_ADDRESS}:5000/api/posts`);
+
         try {
-            await axios.post(`http://3.211.66.2:5000/api/posts`, { title, content });
+            await axios.post(`http://${process.env.REACT_APP_IP_ADDRESS}:5000/api/posts`, { title, content });
             navigate('/'); // Redirect to home after creating the post
         } catch (error) {
             console.error('Error creating post:', error);
