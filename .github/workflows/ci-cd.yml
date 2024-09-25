@@ -37,12 +37,20 @@ jobs:
           docker build -t shoaibisone/open-blog:backend-latest .
           docker push shoaibisone/open-blog:backend-latest
 
+      - name: Run Trivy vulnerability scan backend
+        run: |
+          trivy image --exit-code 1 --severity HIGH,CRITICAL shoaibisone/open-blog:backend-latest
+
       # Frontend Build and Push
       - name: Build and push Frontend Docker image
         run: |
           cd blog-frontend
           docker build -t shoaibisone/open-blog:frontend-latest .
           docker push shoaibisone/open-blog:frontend-latest
+
+      - name: Run Trivy vulnerability scan frontend
+        run: |
+          trivy image --exit-code 1 --severity HIGH,CRITICAL shoaibisone/open-blog:frontend-latest
 
 
       # Deploy to Kubernetes
