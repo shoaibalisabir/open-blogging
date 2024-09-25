@@ -53,7 +53,7 @@ jobs:
           REMOTE_USER: ubuntu 
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
           SCRIPT_BEFORE: |
-            su - minikube
+            su -u minikube
             whoami
             ls -al
             # Create a directory for Kubernetes YAML files
@@ -64,7 +64,7 @@ jobs:
             cd /home/minikube-user/Blog_Project/kubernetes
 
             # Copy YAML files from GitHub Actions runner to the AWS instance
-            
+
             curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/backend-deployment.yaml
             curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/frontend-deployment.yaml
             curl -O https://raw.githubusercontent.com/shoaibalisabir/open-blogging/refs/heads/master/kubernetes/backend-service.yaml
