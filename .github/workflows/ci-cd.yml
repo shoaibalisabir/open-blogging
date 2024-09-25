@@ -56,11 +56,9 @@ jobs:
             whoami
             ls -al
             # Create a directory for Kubernetes YAML files
-            mkdir -p /Blog_Project/kubernetes 
 
-            
+            cd Blog_Project/kubernetes/
 
-            cd /home/minikube-user/Blog_Project/kubernetes
 
             # Copy YAML files from GitHub Actions runner to the AWS instance
 
