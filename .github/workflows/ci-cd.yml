@@ -1,4 +1,4 @@
-name: CI/CD for Open Blog App
+name: CI/CD for Open Blog Apps
 
 on:
     push:
