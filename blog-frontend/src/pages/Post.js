@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-const Dotenv = require('dotenv-webpack');
 
-module.exports = {
-    plugins: [
-        new Dotenv(),
-    ],
-};
 function Post() {
     const { id } = useParams();
     const [post, setPost] = useState(null);

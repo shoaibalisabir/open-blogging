@@ -1,13 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const Dotenv = require('dotenv-webpack');
 
-module.exports = {
-    plugins: [
-        new Dotenv(),
-    ],
-};
 
 function CreatePost() {
     const [title, setTitle] = useState('');
