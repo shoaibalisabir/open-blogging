@@ -9,7 +9,7 @@ function Home() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get('http://${process.env.IP_ADDRESS}:5000/api/posts');
+                const response = await axios.get(`http://${process.env.IP_ADDRESS}:5000/api/posts`);
                 setPosts(response.data);
             } catch (error) {
                 console.error('Error fetching posts:', error);
