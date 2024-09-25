@@ -58,18 +58,18 @@ jobs:
           docker build -t shoaibisone/open-blog:frontend-latest .
           docker push shoaibisone/open-blog:frontend-latest
 
-      - name: Upload Trivy Frontend Image scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
-        if: always()
-        with:
-          sarif_file: 'trivy-results-frontend.sarif'
-
       - name: Run Trivy vulnerability scan frontend
         uses: aquasecurity/trivy-action@0.20.0
         with:
           image-ref: 'shoaibisone/open-blog:frontend-latest'
           format: 'sarif'
           output: 'trivy-results-frontend.sarif'
+
+      - name: Upload Trivy Frontend Image scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        if: always()
+        with:
+          sarif_file: 'trivy-results-frontend.sarif'
 
 
       # Deploy to Kubernetes
