@@ -31,3 +31,8 @@ This project was developed as a basic example of implementing a complete CI/CD p
 
 - **Prometheus:** Prometheus is used for monitoring the Kubernetes cluster and the application's performance.
 - **Grafana:** Grafana is used to visualize the metrics collected by Prometheus. Both tools were installed using community Helm charts.
+![Blog Post Create](https://github.com/user-attachments/assets/3252ff72-8729-44c9-9cf0-f9e3afbe10af)
+![Blog Home](https://github.com/user-attachments/assets/4f605dc9-0864-4c95-8f7e-af808951c322)
+![ARGOCD App](https://github.com/user-attachments/assets/9e7ed4b5-0dc9-461c-a8ea-b4acd5a4502e)
+![Prometheus Dashboard](https://github.com/user-attachments/assets/ddbeb8ae-90d3-4375-b4a0-8d7ad0e1f8da)
+![Grafana Dashboard](https://github.com/user-attachments/assets/b2ef58d5-23c4-44c3-96ce-7d4db9480113)
